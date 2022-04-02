@@ -119,9 +119,4 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # asdf
-
-# Arch
-# /opt/asdf-vm/asdf.sh
-
-# Debian/Ubuntu
-# $HOME/.asdf/asdf.sh
+#$HOME/.asdf/asdf.sh
