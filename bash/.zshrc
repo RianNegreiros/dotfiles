@@ -121,5 +121,3 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # asdf
 #$HOME/.asdf/asdf.sh
-
-eval "$(starship init zsh)"
