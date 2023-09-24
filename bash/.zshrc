@@ -121,3 +121,6 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # asdf
 #$HOME/.asdf/asdf.sh
+
+# Homebrew
+[ -d /home/linuxbrew/.linuxbrew ] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
