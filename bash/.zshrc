@@ -82,9 +82,12 @@ plugins=(
   docker
   docker-compose
   ubuntu
+  archlinux
   zsh-autosuggestions
   zsh-syntax-highlighting
   asdf
+  golang
+  web-search
   )
 
 source $ZSH/oh-my-zsh.sh
