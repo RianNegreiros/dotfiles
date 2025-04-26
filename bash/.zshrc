@@ -81,13 +81,8 @@ plugins=(
   git
   docker
   docker-compose
-  ubuntu
-  archlinux
   zsh-autosuggestions
   zsh-syntax-highlighting
-  asdf
-  golang
-  web-search
   )
 
 source $ZSH/oh-my-zsh.sh
@@ -121,5 +116,11 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+. /home/riann/.asdf/asdf.sh
+. /home/riann/.asdf/asdf.sh
+export PATH=$HOME/.local/bin:$PATH
 
 export GPG_TTY=$(tty)
