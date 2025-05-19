@@ -1,12 +1,14 @@
 # Instructions
 
-1. Copy or Save the script as `install_tools_ubuntu.sh`
+1. Copy the script
 
 2. Make the script executable:
    `chmod +x install_tools_ubuntu.sh`
+   `chmod +x install_tools_arch.sh`
 
 3. Run the script:
    `./install_tools_ubuntu.sh`
+   `./install_tools_arch.sh`
 
 4. After completion, restart your terminal or run:
    `exec zsh`
