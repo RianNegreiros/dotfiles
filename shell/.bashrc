@@ -116,8 +116,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-$HOME/.asdf/asdf.sh
-
-$HOME/.asdf/completions/asdf.bash
-
 export GPG_TTY=$(tty)
