@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e  # Exit on error
+
 echo "Starting installation of development tools..."
 
 # Update package databases
@@ -17,20 +18,6 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 else
     echo "Oh My Zsh is already installed, skipping..."
 fi
-
-# Install ASDF VM (latest version)
-echo "Installing ASDF VM..."
-if [ ! -d "$HOME/.asdf" ]; then
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
-else
-    echo "ASDF VM is already installed, skipping..."
-fi
-
-# Add ASDF to shell configuration
-echo "Configuring ASDF in shell..."
-ASDF_CONFIG='. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"'
-grep -qF "$ASDF_CONFIG" ~/.zshrc || echo "$ASDF_CONFIG" >> ~/.zshrc
 
 # Install Powerlevel10k
 echo "Installing Powerlevel10k theme..."
