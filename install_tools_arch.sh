@@ -49,6 +49,34 @@ fi
 # Configure plugins in .zshrc
 sed -i "s/plugins=(.*)/plugins=(git zsh-syntax-highlighting zsh-autosuggestions)/" ~/.zshrc
 
+# Install SDKMAN
+echo "Installing SDKMAN..."
+if [ ! -d "$HOME/.sdkman" ]; then
+    curl -s "https://get.sdkman.io" | bash
+    # Source SDKMAN
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
+    # Add SDKMAN initialization to .zshrc if not already present
+    if ! grep -q "sdkman-init.sh" ~/.zshrc; then
+        echo '[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"' >> ~/.zshrc
+    fi
+else
+    echo "SDKMAN is already installed, skipping..."
+fi
+
+# Install nvm (Node Version Manager)
+echo "Installing nvm..."
+if [ ! -d "$HOME/.nvm" ]; then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    # Add nvm initialization to .zshrc if not already present
+    if ! grep -q "nvm.sh" ~/.zshrc; then
+        echo 'export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> ~/.zshrc
+    fi
+else
+    echo "nvm is already installed, skipping..."
+fi
+
 # Make zsh the default shell
 echo "Setting ZSH as the default shell..."
 ZSH_PATH=$(which zsh)
