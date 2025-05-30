@@ -16,6 +16,10 @@
             "id": "User.paste"
         },
         {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
             "command": 
             {
                 "action": "splitPane",
@@ -23,15 +27,14 @@
                 "splitMode": "duplicate"
             },
             "id": "User.splitPane.A6751878"
-        },
-        {
-            "command": "find",
-            "id": "User.find"
         }
     ],
+    "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{5b2cdb5e-ad17-57d2-96d8-db864c3f8c78}",
+    "defaultProfile": "{3242423b-4a97-5351-b6fa-d9da9342b20c}",
+    "initialCols": 160,
+    "initialRows": 40,
     "keybindings": 
     [
         {
@@ -39,12 +42,12 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
-        {
             "id": "User.paste",
             "keys": "ctrl+v"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
         },
         {
             "id": "User.splitPane.A6751878",
@@ -137,6 +140,29 @@
                 "hidden": false,
                 "name": "archlinux",
                 "opacity": 80,
+                "source": "Microsoft.WSL"
+            },
+            {
+                "font": 
+                {
+                    "face": "MesloLGS NF"
+                },
+                "guid": "{3242423b-4a97-5351-b6fa-d9da9342b20c}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "opacity": 80,
+                "source": "Microsoft.WSL"
+            },
+            {
+                "guid": "{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}",
+                "hidden": false,
+                "name": "Ubuntu 22.04.5 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{73ae9a80-1f38-55f1-9d73-dda6fbb1c283}",
+                "hidden": false,
+                "name": "archlinux",
                 "source": "Microsoft.WSL"
             }
         ]
