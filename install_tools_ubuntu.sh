@@ -78,6 +78,28 @@ else
     echo "nvm is already installed, skipping..."
 fi
 
+# Make zsh the default shell
+echo "Setting ZSH as the default shell..."
+ZSH_PATH=$(which zsh)
+if [ -n "$ZSH_PATH" ]; then
+    # Check if zsh is in /etc/shells
+    if ! grep -q "$ZSH_PATH" /etc/shells; then
+        echo "Adding $ZSH_PATH to /etc/shells..."
+        echo "$ZSH_PATH" | sudo tee -a /etc/shells
+    fi
+    
+    # Change shell
+    if [ "$SHELL" != "$ZSH_PATH" ]; then
+        echo "Changing default shell to ZSH..."
+        chsh -s "$ZSH_PATH"
+        echo "Shell changed to ZSH. You may need to log out and back in for this to take effect."
+    else
+        echo "ZSH is already your default shell."
+    fi
+else
+    echo "ZSH not found. Please make sure it's installed correctly."
+fi
+
 echo "Installation complete!"
 echo "Please restart your terminal or run 'zsh' to apply changes."
 echo "When you first start ZSH with Powerlevel10k, a configuration wizard will appear."
