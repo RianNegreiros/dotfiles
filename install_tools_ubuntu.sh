@@ -9,7 +9,7 @@ sudo apt-get update
 
 # Install required dependencies
 echo "Installing dependencies..."
-sudo apt-get install -y zsh curl git
+sudo apt-get install -y zsh curl git zip unzip
 
 # Install Oh My Zsh
 echo "Installing Oh My Zsh..."

@@ -9,7 +9,7 @@ sudo pacman -Syu --noconfirm
 
 # Install required dependencies
 echo "Installing dependencies..."
-sudo pacman -S --needed --noconfirm zsh curl git base-devel
+sudo pacman -S --needed --noconfirm zsh curl git base-devel zip unzip
 
 # Install Oh My Zsh
 echo "Installing Oh My Zsh..."
