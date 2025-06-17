@@ -1,174 +1,58 @@
 {
-    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
+    "actions": [
         {
-            "command": 
-            {
+            "command": {
                 "action": "copy",
                 "singleLine": false
             },
-            "id": "User.copy.644BA8F2"
+            "keys": "ctrl+c"
         },
         {
             "command": "paste",
-            "id": "User.paste"
+            "keys": "ctrl+v"
         },
         {
             "command": "find",
-            "id": "User.find"
+            "keys": "ctrl+shift+f"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
             },
-            "id": "User.splitPane.A6751878"
+            "keys": "alt+shift+d"
         }
     ],
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{3242423b-4a97-5351-b6fa-d9da9342b20c}",
     "initialCols": 160,
     "initialRows": 40,
-    "keybindings": 
-    [
-        {
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
+    "profiles": {
+        "defaults": {
+            "colorScheme": "Dracula",
+            "opacity": 80
         },
-        {
-            "id": "User.paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
-        }
-    ],
-    "newTabMenu": 
-    [
-        {
-            "type": "remainingProfiles"
-        }
-    ],
-    "profiles": 
-    {
-        "defaults": 
-        {
-            "colorScheme": "Dracula"
-        },
-        "list": 
-        [
+        "list": [
             {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell"
-            },
-            {
-                "commandline": "%SystemRoot%\\System32\\cmd.exe",
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "Prompt de comando"
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
-                "font": 
-                {
-                    "face": "MesloLGS NF"
-                },
-                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
-                "hidden": false,
                 "name": "Ubuntu",
-                "opacity": 80,
-                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
-            },
-            {
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "hidden": false,
-                "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore"
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": true,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "font": 
-                {
+                "source": "Microsoft.WSL",
+                "font": {
                     "face": "MesloLGS NF"
-                },
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
-                "hidden": false,
+                }
+            },
+            {
                 "name": "Arch",
-                "opacity": 80,
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "font": 
-                {
+                "source": "Microsoft.WSL",
+                "font": {
                     "face": "MesloLGS NF"
-                },
-                "guid": "{5b2cdb5e-ad17-57d2-96d8-db864c3f8c78}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "opacity": 80,
-                "source": "Microsoft.WSL"
-            },
-            {
-                "font": 
-                {
-                    "face": "MesloLGS NF"
-                },
-                "guid": "{cad36638-1edc-598e-9338-0150c4e130af}",
-                "hidden": false,
-                "name": "archlinux",
-                "opacity": 80,
-                "source": "Microsoft.WSL"
-            },
-            {
-                "font": 
-                {
-                    "face": "MesloLGS NF"
-                },
-                "guid": "{3242423b-4a97-5351-b6fa-d9da9342b20c}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "opacity": 80,
-                "source": "Microsoft.WSL"
-            },
-            {
-                "guid": "{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}",
-                "hidden": false,
-                "name": "Ubuntu 22.04.5 LTS",
-                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
-            },
-            {
-                "guid": "{73ae9a80-1f38-55f1-9d73-dda6fbb1c283}",
-                "hidden": false,
-                "name": "archlinux",
-                "source": "Microsoft.WSL"
+                }
             }
         ]
     },
-    "schemes": 
-    [
+    "schemes": [
         {
             "background": "#282A36",
             "black": "#21222C",
@@ -192,6 +76,5 @@
             "white": "#F8F8F2",
             "yellow": "#F1FA8C"
         }
-    ],
-    "themes": []
+    ]
 }
