@@ -1,0 +1,65 @@
+general.import = ["./themes/dracula.toml"]
+
+# Shell settings
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l"]
+
+[window]
+# Window dimensions
+dimensions = { columns = 140, lines = 40 }
+padding = { x = 8, y = 8 }
+decorations = "Full"
+opacity = 0.95
+blur = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+# Use a Nerd Font for Powerlevel10k icons
+normal = { family = "MesloLGS NF", style = "Regular" }
+bold = { family = "MesloLGS NF", style = "Bold" }
+italic = { family = "MesloLGS NF", style = "Italic" }
+bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
+size = 12.0
+
+[font.offset]
+x = 0
+y = 1
+
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 750
+unfocused_hollow = true
+
+[keyboard]
+# Windows Terminal-like keybindings
+bindings = [
+  # Copy/Paste (Ctrl+Shift+C/V like Windows Terminal)
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+
+  # New window/tab
+  { key = "T", mods = "Control|Shift", action = "CreateNewWindow" },
+  { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+
+  # Font size adjustment
+  { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  { key = "Key0", mods = "Control", action = "ResetFontSize" },
+
+  # Split panes (if using tmux/zellij)
+  { key = "D", mods = "Control|Shift", action = "CreateNewWindow" },
+]
+
+[mouse]
+hide_when_typing = false
+
+# Clickable URLs
+[hints]
+enabled = [
+  { regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001f\u007f-\u009f<>\"\\s{-}\\^⟨⟩`]+", command = "open", post_processing = true, mouse = { enabled = true } }
+]
