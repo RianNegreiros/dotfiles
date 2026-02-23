@@ -1,0 +1,52 @@
+background-opacity = 0.8
+background-blur = true
+theme = dracula
+window-decoration = true
+font-family = "JetBrains Mono"
+
+# Enable VSync
+# Options: Boolean
+window-vsync = true
+
+# Confirm before closing
+# Options: Boolean
+confirm-close-surface = true
+
+# Trim spaces when copying
+# Options: Boolean
+clipboard-trim-trailing-spaces = true
+
+# Paste protection warning
+# Options: Boolean
+clipboard-paste-protection = true
+
+# Safe bracketed paste
+# Options: Boolean
+clipboard-paste-bracketed-safe = true
+
+# Allow desktop notifications
+# Options: Boolean
+desktop-notifications = true
+
+# Wide tabs
+# Options: Boolean
+gtk-wide-tabs = true
+
+# Show GTK titlebar
+# Options: Boolean
+gtk-titlebar = false
+
+# Auto-hide on focus lost
+# Options: Boolean
+quick-terminal-autohide = true
+
+window-padding-x = 10,20
+window-padding-y = 10,20
+
+# Window height in cells
+# Options: Number
+window-height = 36
+
+# Window width in cells
+# Options: Number
+window-width = 160
