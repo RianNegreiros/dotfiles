@@ -16,6 +16,6 @@
 5. When you first start ZSH with Powerlevel10k, a configuration wizard will appear.
    Follow the prompts to customize your terminal appearance.
 
-Theme: [Dracula Theme](draculatheme.com)
+Theme: [Dracula Theme](https://www.draculatheme.com)
 
 **Note: The script requires an internet connection and sudo privileges for package installation.**
